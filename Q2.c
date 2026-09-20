@@ -1,19 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int num1, num2;
+    int totalSeconds, hours, minutes, seconds;
 
-    printf("Enter two numbers:\n");
-    scanf("%d %d", &num1, &num2);
+    printf("Enter time in seconds: ");
+    scanf("%d", &totalSeconds);
 
-    printf("Sum = %d\n", num1 + num2);
-    printf("Difference = %d\n", num1 - num2);
-    printf("Product = %d\n", num1 * num2);
+    hours = totalSeconds / 3600;
+    minutes = (totalSeconds % 3600) / 60;
+    seconds = totalSeconds % 60;
 
-    if (num2 != 0)
-        printf("Quotient = %.2f\n", (float)num1 / num2);
-    else
-        printf("Quotient = Cannot divide by zero\n");
+    printf("Time = %02d:%02d:%02d\n", hours, minutes, seconds);
 
     return 0;
 }
+
