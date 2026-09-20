@@ -1,17 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    float radius, area, circumference;
-    const float PI = 3.14159;
+    float celsius, fahrenheit;
 
-    printf("Enter radius: ");
-    scanf("%f", &radius);
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &celsius);
 
-    area = PI * radius * radius;
-    circumference = 2 * PI * radius;
+    fahrenheit = (celsius * 9 / 5) + 32;
 
-    printf("Area = %.2f\n", area);
-    printf("Circumference = %.2f\n", circumference);
+    printf("Temperature in Fahrenheit = %.2f\n", fahrenheit);
 
     return 0;
 }
